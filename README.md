@@ -1,5 +1,7 @@
 # Elasticsearch::Git
 
+Based on https://github.com/zzet/elasticsearch-git
+
 [![Gem Version](https://badge.fury.io/rb/elasticsearch-git.svg)](http://badge.fury.io/rb/elasticsearch-git)
 
 [Elasticsearch](https://github.com/elasticsearch/elasticsearch-rails/tree/master/elasticsearch-model) integrations for git repositories.
@@ -17,7 +19,7 @@ gem 'elasticsearch-git', '~> 0.0.5'
 
 # or
 
-gem 'elasticsearch-git', github: 'zzet/elasticsearch-git', ref: 'last_ref'
+gem 'elasticsearch-git', github: 'undev/elasticsearch-git', ref: 'last_ref'
 ```
 
 And then execute:
@@ -344,7 +346,7 @@ Project.last.repository.as_indexed_json
 
 ## Contributing
 
-1. Fork it ( http://github.com/zzet/elasticsearch-git/fork )
+1. Fork it ( http://github.com/Undev/elasticsearch-git/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
