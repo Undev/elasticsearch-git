@@ -151,13 +151,6 @@ module Elasticsearch
         def logger
           @logger ||= Logger.new(STDOUT)
         end
-
-        private
-
-        def merge_base(to_rev)
-          head_sha = repository_for_indexing.last_commit.oid
-          repository_for_indexing.merge_base(to_rev, head_sha)
-        end
       end
 
       module ClassMethods

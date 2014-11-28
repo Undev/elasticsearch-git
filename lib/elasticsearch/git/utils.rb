@@ -8,7 +8,7 @@ module Elasticsearch
                  if to_rev == repository_for_indexing.last_commit.oid
                    nil
                  else
-                   merge_base(to_rev)
+                   merge_base(to_rev, repository_for_indexing)
                  end
                else
                  from_rev
@@ -19,6 +19,11 @@ module Elasticsearch
 
       def index_new_branch?(from)
         from == '0000000000000000000000000000000000000000'
+      end
+
+      def merge_base(to_rev, repository_for_indexing)
+        head_sha = repository_for_indexing.last_commit.oid
+        repository_for_indexing.merge_base(to_rev, head_sha)
       end
     end
   end
